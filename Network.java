@@ -124,12 +124,13 @@ public class Network {
         String net = "Network:\n";
         String ans = "";
         for(int j = 0; j < userCount; j++){
+            if (j > 0)
+                ans = ans + "\n";
             ans = ans + users[j].getName() + " -> ";
 
             for (int i = 0; i < users[j].getfCount(); i++) {
                 ans = ans + users[j].getfFollows()[i] + " ";
             }
-            ans = ans + "\n";
         }
 
         return net + ans;
